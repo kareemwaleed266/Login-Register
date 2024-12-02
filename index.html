@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login/Register</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav class="d-none navbar item">
+      <div class="container px-5 py-2">
+        <a class="navbar-brand text-white text-uppercase text-decoration-none"
+          >smart login</a
+        >
+        <button id="logout" class="btn btn-outline-warning">Logout</button>
+      </div>
+    </nav>
+
+    <div
+      class="container d-flex px-5 justify-content-center align-items-center vh-100"
+    >
+      <div class="item mt-5 p-5 w-70 mx-auto">
+        <h1 class="text-center fw-semibold">Smart Login System</h1>
+
+        <form class="p-2">
+          <div class="my-3 mt-1">
+            <input
+              type="text"
+              class="form-control bg-transparent d-none"
+              id="username"
+              placeholder="Enter Your Name"
+            />
+          </div>
+
+          <div class="my-3 mt-1">
+            <input
+              type="email"
+              class="form-control bg-transparent"
+              id="email"
+              placeholder="Enter Your Email"
+            />
+          </div>
+
+          <div class="my-3">
+            <input
+              type="password"
+              class="form-control bg-transparent"
+              id="pass"
+              placeholder="Enter Your Password"
+              autocomplete="current-password"
+            />
+          </div>
+          <button id="login" class="btn btn-outline-main w-100 my-3">
+            Login
+          </button>
+
+          <p class="text-white text-center">
+            Don’t have an account?
+            <a href="" id="signup" class="text-white text-decoration-none"
+              >Sign Up</a
+            >
+          </p>
+        </form>
+      </div>
+
+      <div
+        id="home-page"
+        class="d-none item p-5 w-70 mx-auto d-flex justify-content-center align-items-center p-4 text-center"
+      ></div>
+
+      <div id="customAlert" class="custom-alert">
+        <div class="alert-content">
+          <h2 id="alertMessage" class="bg-danger-subtle p-3"></h2>
+          <button onclick="closeAlert()" class="btn btn-danger">Close</button>
+        </div>
+      </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
