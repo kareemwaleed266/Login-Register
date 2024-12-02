@@ -26,6 +26,8 @@ signup.addEventListener("click", function (e) {
     loginBtn.textContent = "Sign Up";
     signup.textContent = "Login";
   } else if (signup.textContent === "Login") {
+    signup.previousSibling.textContent = "Don’t have an account? ";
+
     username.classList.add("d-none");
     loginBtn.textContent = "Login";
     signup.textContent = "Sign Up";
